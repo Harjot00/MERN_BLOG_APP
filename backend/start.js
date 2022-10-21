@@ -21,17 +21,15 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
-const __dirname = path.resolve();
-
 if (process.env.NODE_ENV == "production") {
-  app.use(express.static(path.join(__dirname, "frontend", "build")));
+  app.use(express.static(path.join("frontend", "build")));
 }
 
 app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
 app.get("*", function (req, res) {
-  res.sendFile(path.resolve(__dirname, "frontend", "build"));
+  res.sendFile(path.resolve("frontend", "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 3000, () => {
