@@ -4,9 +4,11 @@
   "description": "MERN BLOG APPLICATION",
   "main": "start.js",
   "scripts": {
-    "start": "nodemon backend/start.js",
-    "start-client": "react-scripts start",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "build":"cd frontend && npm run build",
+    "install-client": "cd frontend && npm install",
+    "heroku-postbuild":"npm run install-client && npm run build",
+    "start-server": "nodemon backend/start.js",
+    "start-client": "cd frontend && npm start"
   },
   "keywords": [],
   "author": "Harjot Singh",

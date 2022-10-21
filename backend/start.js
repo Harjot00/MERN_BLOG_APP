@@ -21,6 +21,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static("./frontend/build"));
+}
+
 app.use("/", userRouter);
 app.use("/", blogRouter);
 
