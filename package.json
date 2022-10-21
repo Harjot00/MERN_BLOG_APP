@@ -5,6 +5,7 @@
   "main": "start.js",
   "scripts": {
     "start": "nodemon backend/start.js",
+    "start-client": "react-scripts start",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [],
