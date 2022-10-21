@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
-const appRoot = require("app-root-path");
 const app = express();
 const userRouter = require("./routes/userRoutes");
 const blogRouter = require("./routes/blogRoutes");
