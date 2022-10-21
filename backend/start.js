@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
+const root = require("path").resolve("../");
 const app = express();
 const userRouter = require("./routes/userRoutes");
 const blogRouter = require("./routes/blogRoutes");
@@ -29,7 +30,7 @@ app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+  res.sendFile(path.join(root, "frontend", "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 3000, () => {
