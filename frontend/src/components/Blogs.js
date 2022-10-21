@@ -10,7 +10,7 @@ const Blogs = () => {
     setisLoading(!loading);
 
     const res = await axios
-      .get("http://localhost:3001/allBlogs")
+      .get("api/allBlogs")
 
       .catch((err) => {
         console.log(err);

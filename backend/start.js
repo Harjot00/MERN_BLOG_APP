@@ -25,8 +25,8 @@ if (process.env.NODE_ENV == "production") {
   app.use(express.static("./frontend/build"));
 }
 
-app.use("/", userRouter);
-app.use("/", blogRouter);
+app.use("/api", userRouter);
+app.use("/api", blogRouter);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("server started");

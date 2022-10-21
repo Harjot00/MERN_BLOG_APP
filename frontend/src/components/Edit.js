@@ -51,7 +51,7 @@ const EditBlog = ({}) => {
     console.log(blogPost);
 
     await axios
-      .put(`http://localhost:3001/edit/${id}`, formData)
+      .put(`api/edit/${id}`, formData)
       .then((res) => {
         navigate("/");
       })

@@ -35,9 +35,7 @@ const BlogCard = ({
   };
 
   const deletePost = async () => {
-    axios
-      .delete(`http://localhost:3001/delete/${id}`)
-      .catch((err) => console.error(err));
+    axios.delete(`api/delete/${id}`).catch((err) => console.error(err));
     setRefresh(!refresh);
   };
 

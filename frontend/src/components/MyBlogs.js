@@ -8,7 +8,7 @@ const MyBlogs = () => {
   const userId = localStorage.getItem("userId");
   const apiRequest = async () => {
     const res = await axios
-      .get(`http://localhost:3001/users/${userId}`)
+      .get(`api/users/${userId}`)
       .catch((err) => console.error(err));
     const data = await res.data;
     return data;

@@ -22,7 +22,7 @@ const Auth = () => {
 
   const apiRequest = (type) => {
     axios
-      .post(`http://localhost:3001/${type}`, {
+      .post(`api/${type}`, {
         username: inputData.name,
         email: inputData.email,
         password: inputData.password,
