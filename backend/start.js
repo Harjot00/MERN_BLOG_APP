@@ -36,3 +36,6 @@ app.get("*", function (req, res) {
 app.listen(process.env.PORT || 3000, () => {
   console.log("server started");
 });
+
+const heroku = path.join(__dirname);
+console.log(heroku);
