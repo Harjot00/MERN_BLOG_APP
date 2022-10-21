@@ -25,13 +25,11 @@ if (process.env.NODE_ENV == "production") {
   app.use(express.static(path.join(__dirname, "frontend", "build")));
 }
 
-
-
 app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname,"frontend", "build", "index.html"));
+  res.sendFile(path.join("index.html", { root: __dirname }));
 });
 
 app.listen(process.env.PORT || 3000, () => {
