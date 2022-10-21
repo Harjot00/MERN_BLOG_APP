@@ -29,7 +29,7 @@ app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+  res.sendFile(path.join("frontend", "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 3000, () => {
