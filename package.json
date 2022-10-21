@@ -4,7 +4,7 @@
   "description": "MERN BLOG APPLICATION",
   "main": "start.js",
   "scripts": {
-    "start": "nodemon start.js",
+    "start": "nodemon backend/start.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "keywords": [],
