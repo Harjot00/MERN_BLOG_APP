@@ -22,14 +22,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 if (process.env.NODE_ENV == "production") {
-  app.use(express.static(path.join(__dirname, "frontend", "build")));
+  app.use(express.static(path.join("app", "frontend", "build")));
 }
 
 app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join("index.html", { root: __dirname }));
+  res.sendFile(path.join("app", "frontend", "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 3000, () => {
