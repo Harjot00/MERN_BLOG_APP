@@ -64,7 +64,7 @@ const EditBlog = ({}) => {
   const getData = async () => {
     try {
       setisLoading(true);
-      const res = await axios.get(`http://localhost:3001/blogs/${id}`);
+      const res = await axios.get(`api/blogs/${id}`);
       const data = await res.data;
       setblogPost({
         ...data,

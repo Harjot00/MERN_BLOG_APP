@@ -54,7 +54,7 @@ const AddBlog = () => {
     }
 
     await axios
-      .post(`http://localhost:3001/newBlog/${userId}`, formData)
+      .post(`api/newBlog/${userId}`, formData)
       .then((res) => {
         navigate("/");
       })
