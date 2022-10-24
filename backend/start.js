@@ -28,7 +28,7 @@ if (process.env.NODE_ENV == "production") {
 app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
-app.get("*", function (req, res) {
+app.get("/*", function (req, res) {
   res.sendFile(path.resolve("frontend", "build", "index.html"));
 });
 
