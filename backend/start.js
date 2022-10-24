@@ -9,7 +9,6 @@ const userRouter = require("./routes/userRoutes");
 const blogRouter = require("./routes/blogRoutes");
 
 dotenv.config();
-app.disable('etag');
 
 mongoose
   .connect(process.env.MONGO_URI)
