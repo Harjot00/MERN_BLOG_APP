@@ -10,6 +10,7 @@
     "start": "nodemon backend/start.js",
     "start-client": "cd frontend && npm start"
   },
+  "proxy": "http://localhost:3000",
   "keywords": [],
   "author": "Harjot Singh",
   "license": "ISC",
